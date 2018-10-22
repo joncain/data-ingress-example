@@ -93,7 +93,7 @@ namespace DataIngressExample
                 Console.WriteLine(reqBody);
                 Console.WriteLine("--- --- ---");
 
-                byte[] reqBytes = Encoding.ASCII.GetBytes(reqBody);
+                byte[] reqBytes = Encoding.UTF8.GetBytes(reqBody);
                 req.ContentLength = reqBytes.Length;
 
                 Stream reqStream = req.GetRequestStream();
